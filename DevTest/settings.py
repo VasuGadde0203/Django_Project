@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,13 @@ SECRET_KEY = 'django-insecure--l&x2q&-6trb+=-=shaf52ifhdv)@q&nxzo$l3x%j15yn9zvoa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+# Allow all hosts for Heroku
+ALLOWED_HOSTS = ['*']
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 
 # Application definition
