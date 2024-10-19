@@ -30,7 +30,7 @@ def index(request):
             subject='Python Assignment - Vasu Gadde',  # Replace with your name
             message=f"Summary Report:\n\n{summary_str}",
             from_email=settings.EMAIL_HOST_USER,
-            recipient_list=['vasugadde1234@gmail.com'],
+            recipient_list=['tech@themedius.ai'],
         )
         
         # Convert summary data into a list of dictionaries to pass to the template
